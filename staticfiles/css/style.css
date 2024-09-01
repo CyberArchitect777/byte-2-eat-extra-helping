@@ -1,0 +1,163 @@
+
+/* Page styles */
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+main {
+    background: white url("https://res.cloudinary.com/dp1ehadna/image/upload/v1723822653/heroimage_pdpk38.jpg") no-repeat center/cover fixed;
+}
+
+/* Header styles */
+
+header, nav {
+    background-color: #5058A8;
+    color: white;
+}
+
+header .nav-link, header .nav-brand {
+    color: white;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:focus-visible {
+    text-decoration: underline;
+    color: white;
+}
+
+.navbar-toggler {
+    color: #fff;
+    border-color: #fff; 
+}
+
+.navbar-toggler-icon {
+    /* Provides an icon for the navbar on mobile view */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* align collapsed menu text right */
+@media (max-width: 991.98px) { /* Adjust breakpoint as needed */
+    .navbar-collapse {
+      text-align: right;
+    }
+  }
+
+
+header img {
+    width: 150px;
+}
+
+/* Footer styles */
+
+footer {
+    background-color: #5058A8;
+    color: white;
+}
+
+footer i {
+    color: white;
+}
+
+/* Index page */
+
+.index-box {
+    background-color: white;
+    color: #5058A8;
+}
+
+#company-logo {
+    min-width: 270px;
+}
+
+/* Register page */
+
+.login li, #signup_form li {
+    list-style: none;
+}
+
+/* This is to help the text on the page stand out from the background image */
+.text-overlay {
+    background: rgba(255, 255, 255, 0.97); /* White with 50% transparency */
+    padding: 10px 0px; /* Adjust padding as needed */
+    display: inline-block; /* Ensures effect only takes up the width of the text */
+    border-radius: 5px; /* Adds rounded corners */
+}
+
+/* Sign in and Log Out pages */
+
+.welcome {
+    text-align: center;
+    justify-content: center;
+}
+
+.signing {
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.signingbutton {
+    background-color: #F4C542; 
+    color: black;
+    width: 260px;
+    height: 50px; 
+    border: 2px solid black; 
+    border-radius: 5px; 
+    font-size: 16px;
+    font-weight: bold; 
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.signingbutton:hover {
+    background-color: #F4C542; 
+    color: black; 
+    border-color: black; 
+}
+
+
+.loginmessage {
+    text-align: right;
+}
+
+/* Dropdown Arrow */
+.dropdown-arrow {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    padding-right: 24px;
+    /* Space for arrow */
+    font-size: 16px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><path fill="none" stroke="%23333" stroke-width="2" d="M1 1l5 5 5-5"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px 10px;
+}
+
+/* About Page */
+
+#aboutbyte {
+    text-align: center;
+}
+
+/* Reviews page */
+
+.set-vertical-align {
+    vertical-align: middle;
+}
+
+
+/* Media queries */
+
+@media only screen and (min-width: 720px) {
+
+    /* Index page */
+
+    #company-logo {
+        max-width: 600px;
+    }
+
+}
