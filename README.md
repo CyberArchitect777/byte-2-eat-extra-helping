@@ -24,3 +24,36 @@ The links for the original project that this is based on can also be found below
 Deployed website: (https://hackathon3-byte-to-eat-project-25fab4e92590.herokuapp.com/)
 
 GitHub repository: (https://github.com/CyberArchitect777/hackathon3-byte-to-eat-project)
+
+## Technical
+
+This site was created using the following technologies:
+
+- HTML
+- CSS
+- Bootstrap framework
+- Python
+- Django
+- Google Fonts
+- Font Awesome
+
+## Team
+
+The following individuals are involved in creating this project: 
+
+- Christina Hughes (https://github.com/CHughes13)
+
+- Barrie Millar (https://github.com/CyberArchitect777)
+
+The original team involved in producing the original Byte 2 Eat project are shown below. A lot of the programming and assets used in the original are also naturally used in this project.
+
+The full-time developers:
+
+    Christina Hughes - (https://github.com/CHughes13)
+    Barrie Millar - (https://github.com/CyberArchitect777)
+    Samuel Parker - (https://github.com/SamuelParkerTech)
+
+Asset additions only:
+
+    Jamie Pudsey - (https://github.com/JPudsey-11)
+    Aeryx Rose - (https://github.com/SubjugatorofCSS)
