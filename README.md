@@ -1,5 +1,5 @@
 
-# Byte 2 Eat: Extra Happy
+# Byte 2 Eat: Extra Helping
 ## By Christina Hughes and Barrie Millar
 ### A Private Takeaway Review Site
 
