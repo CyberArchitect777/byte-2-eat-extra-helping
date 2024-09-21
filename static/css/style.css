@@ -1,4 +1,14 @@
 
+/* Utility styles */
+
+.foreground-red {
+    color: red;
+}
+
+/* Font styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap');
+
 /* Page styles */
 
 body {
@@ -51,6 +61,16 @@ header .nav-link, header .nav-brand {
 
 header img {
     width: 150px;
+}
+
+.navbar-brand {
+    font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    background-color: white;
+    color: #5058A8;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Footer styles */
