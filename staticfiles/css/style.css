@@ -1,4 +1,14 @@
 
+/* Utility styles */
+
+.foreground-red {
+    color: red;
+}
+
+/* Font styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap');
+
 /* Page styles */
 
 body {
@@ -9,6 +19,10 @@ body {
 
 main {
     background: white url("https://res.cloudinary.com/dp1ehadna/image/upload/v1723822653/heroimage_pdpk38.jpg") no-repeat center/cover fixed;
+}
+
+.bg-white {
+    background-color: white;
 }
 
 /* Header styles */
@@ -22,7 +36,7 @@ header .nav-link, header .nav-brand {
     color: white;
 }
 
-.nav-link:hover, .nav-link:focus, .nav-link:focus-visible {
+.nav-link:focus, .nav-link:focus, .nav-link:focus-visible {
     text-decoration: underline;
     color: white;
 }
@@ -49,6 +63,20 @@ header img {
     width: 150px;
 }
 
+.navbar-brand {
+    font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    background-color: white;
+    color: #5058A8;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-brand:hover {
+    color: #5058A8;
+}
+
 /* Footer styles */
 
 footer {
@@ -61,6 +89,22 @@ footer i {
 }
 
 /* Index page */
+
+#index-logo {
+    font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    background-color: white;
+    color: #5058A8;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 50px;
+}
+
+#index-logo i {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 .index-box {
     background-color: white;
@@ -75,6 +119,12 @@ footer i {
 
 .login li, #signup_form li {
     list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#signup_form label {
+    width: 150px;
 }
 
 /* This is to help the text on the page stand out from the background image */
@@ -87,6 +137,10 @@ footer i {
 
 /* Sign in and Log Out pages */
 
+.login label {
+    width: 125px;
+}
+
 .welcome {
     text-align: center;
     justify-content: center;
@@ -96,6 +150,7 @@ footer i {
     color: black;
     font-weight: 600;
     text-align: center;
+    background-color: white;
 }
 
 .signingbutton {
@@ -143,12 +198,59 @@ footer i {
     text-align: center;
 }
 
+.image-container {
+    width: 100%;
+    padding-top: 75%; /* Aspect ratio 4:3 */
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+#snackprofile {
+    text-align: left;
+}
+
+#snackprofile h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card {
+    display: block;
+}
+
 /* Reviews page */
 
 .set-vertical-align {
-    vertical-align: middle;
+    vertical-align:middle;
 }
 
+#table-element {
+    display: none;
+}
+
+#review-area .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: 270px;
+}
+
+/* Add review */
+
+#add-review label {
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 /* Media queries */
 
@@ -159,5 +261,18 @@ footer i {
     #company-logo {
         max-width: 600px;
     }
+}
 
+@media only screen and (min-width: 992px) {
+    
+    /* Review page */
+
+    #table-element {
+        display: block;
+        text-align: center;
+    }
+
+    #review-area .card {
+        display: none;
+    }
 }
