@@ -36,7 +36,7 @@ header .nav-link, header .nav-brand {
     color: white;
 }
 
-.nav-link:hover, .nav-link:focus, .nav-link:focus-visible {
+.nav-link:focus, .nav-link:focus, .nav-link:focus-visible {
     text-decoration: underline;
     color: white;
 }
@@ -73,6 +73,10 @@ header img {
     padding-right: 10px;
 }
 
+.navbar-brand:hover {
+    color: #5058A8;
+}
+
 /* Footer styles */
 
 footer {
@@ -85,6 +89,22 @@ footer i {
 }
 
 /* Index page */
+
+#index-logo {
+    font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    background-color: white;
+    color: #5058A8;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 50px;
+}
+
+#index-logo i {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 .index-box {
     background-color: white;
