@@ -62,4 +62,4 @@ Asset additions only:
 
 These assets were used in the creation of this site. Our thanks to the original authors involved in their creation.
 
-- Site background image - Image by <a href="https://pixabay.com/users/gtrrestaurant-31208181/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7580942">gtr restaurant</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7580942">Pixabay</a>
+- Site background image - By <a href="https://pixabay.com/users/serenityart-38195676/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8737346">SerenityArt</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8737346">Pixabay</a>
