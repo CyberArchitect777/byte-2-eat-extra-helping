@@ -5,6 +5,10 @@
     color: red;
 }
 
+.bg-white {
+    background-color: white;
+}
+
 /* Font styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap');
@@ -21,14 +25,34 @@ main {
     background: black url("https://res.cloudinary.com/dp1ehadna/image/upload/v1727013223/pile-8737346_1920_v6sdn2.jpg") no-repeat center/cover fixed;
 }
 
-.bg-white {
-    background-color: white;
+/* Multi-purpose styles */
+
+.signingbutton {
+    background-color: #F4C542; 
+    color: black;
+    width: 260px;
+    height: 50px; 
+    border: 2px solid black; 
+    border-radius: 5px; 
+    font-size: 16px;
+    font-weight: bold; 
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 1.0;
+}
+
+.signingbutton:hover {
+    background-color: #F4C542; 
+    color: black; 
+    border-color: black;
 }
 
 /* Header styles */
 
 header, nav {
-    background-color: #5058A8;
+    /*background-color: #5058A8;*/
+    background-color: rgb(202, 17, 0);
     color: white;
 }
 
@@ -69,7 +93,8 @@ header img {
     font-size: 14px;
     height: 39.6px;
     background-color: white;
-    color: #5058A8;
+    color: black;
+    /*color: #5058A8;*/
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -77,13 +102,15 @@ header img {
 }
 
 .navbar-brand:hover {
-    color: #5058A8;
+    color: black;
+    /*color: #5058A8;*/
 }
 
 /* Footer styles */
 
 footer {
-    background-color: #5058A8;
+    /*background-color: #5058A8;*/
+    background-color: rgb(202, 17, 0);
     color: white;
     text-align: center;
 }
@@ -99,7 +126,8 @@ footer i {
     font-weight: 800;
     font-size: 22px;
     background-color: white;
-    color: #5058A8;
+    /*color: #5058A8;*/
+    color: black;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 50px;
@@ -112,7 +140,8 @@ footer i {
 
 .index-box {
     background-color: white;
-    color: #5058A8;
+    color: black;
+    /*color: #5058A8;*/
 }
 
 #company-logo {
@@ -157,27 +186,6 @@ footer i {
     text-align: center;
     background-color: white;
 }
-
-.signingbutton {
-    background-color: #F4C542; 
-    color: black;
-    width: 260px;
-    height: 50px; 
-    border: 2px solid black; 
-    border-radius: 5px; 
-    font-size: 16px;
-    font-weight: bold; 
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.signingbutton:hover {
-    background-color: #F4C542; 
-    color: black; 
-    border-color: black; 
-}
-
 
 .loginmessage {
     text-align: right;
