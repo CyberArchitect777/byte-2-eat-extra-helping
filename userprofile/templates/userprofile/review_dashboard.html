@@ -15,7 +15,9 @@
 <form method="get" class="mb-4">
     {% csrf_token %}
     <div class="row">
-        <h2 class="text-center bg-white py-2 my-3 col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4"> Sort by: </h2>
+        <h2
+            class="text-center py-2 my-3 col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 fg-white">
+            Sort by: </h2>
         <div class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4">
 
             <!-- Options user can sort by -->
@@ -45,7 +47,9 @@
         </div>
 
         <div class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 text-center">
-            <a href="{% url 'add_review' %}" class="btn signingbutton w-100 mt-4 mb-4 d-flex align-items-center justify-content-center">Add a Review</a>
+            <a href="{% url 'add_review' %}"
+                class="btn signingbutton w-100 mt-4 mb-4 d-flex align-items-center justify-content-center">Add a
+                Review</a>
         </div>
 
     </div>
@@ -53,7 +57,9 @@
 
 <!-- Displays user's takeaway reviews in an easy to read manner depending on screen width -->
 <div id="review-area" class="container mt-4">
-    <h1 class="text-center mt-4 mb-4 p-1 bg-white col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">My Takeaway Reviews</h1>
+    <h1
+        class="text-center mt-4 mb-4 p-1 fg-white col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+        My Takeaway Reviews</h1>
     {% if user_reviews %}
     <!-- Cards view -->
     <div class="d-flex flex-wrap justify-content-center">
@@ -86,7 +92,8 @@
                     <a href="{% url 'edit_review' review.pk %}"
                         class="btn btn-primary btn-sm me-auto px-3 py-2">Edit</a>
                     <p class="card-text text-center ms-1">{{ review.rating|star_rating|safe }}</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal{{ review.pk }}" aria-label="Deletes the review chosen" class="btn btn-danger btn-sm ms-auto py-2">Delete</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal{{ review.pk }}"
+                        aria-label="Deletes the review chosen" class="btn btn-danger btn-sm ms-auto py-2">Delete</a>
                 </div>
                 <p class="card-text text-center">{{ review.review_title }}</p>
                 <p class="card-text text-center">{{ review.review_content }}</p>
@@ -131,7 +138,8 @@
     </div>
     <!-- If there are no reviews, this message will display instead -->
     {% else %}
-    <p class="text-center bg-white col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">No reviews found. <br> Add your Takeaway reviews by clicking the button below.</p>
+    <p class="text-center fg-white col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">No reviews
+        found. <br> Add your Takeaway reviews by clicking the button below.</p>
     {% endif %}
 </div>
 {% endblock %}
