@@ -184,11 +184,10 @@ footer i {
     width: 125px;
 }
 
-.red-structure {
+.box-structure {
     color: white;
     font-weight: 600;
     text-align: center;
-    background-color: rgba(202,  17, 0, 0.8);
 }
 
 .loginmessage {
