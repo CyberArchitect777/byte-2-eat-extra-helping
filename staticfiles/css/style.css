@@ -1,12 +1,20 @@
 
 /* Utility styles */
 
-.foreground-red {
+.fg-red {
     color: red;
+}
+
+.fg-white {
+    color: white;
 }
 
 .bg-white {
     background-color: white;
+}
+
+.bg-sitered {
+    background-color: rgba(202,  17, 0, 0.8)
 }
 
 /* Font styles */
@@ -22,7 +30,7 @@ body {
 }
 
 main {
-    background: black url("https://res.cloudinary.com/dp1ehadna/image/upload/v1727013223/pile-8737346_1920_v6sdn2.jpg") no-repeat center/cover fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/dp1ehadna/image/upload/v1727013223/pile-8737346_1920_v6sdn2.jpg") no-repeat center/cover fixed;
 }
 
 /* Multi-purpose styles */
@@ -39,13 +47,17 @@ main {
     text-align: center;
     display: inline-block;
     text-decoration: none;
-    opacity: 1.0;
 }
 
 .signingbutton:hover {
     background-color: #F4C542; 
     color: black; 
     border-color: black;
+}
+
+.welcome {
+    text-align: center;
+    justify-content: center;
 }
 
 /* Header styles */
@@ -75,13 +87,9 @@ header .nav-link, header .nav-brand {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* align collapsed menu text right */
-@media (max-width: 991.98px) { /* Adjust breakpoint as needed */
-    .navbar-collapse {
-      text-align: right;
-    }
-  }
-
+.navbar-collapse {
+    text-align: center;
+}
 
 header img {
     width: 150px;
@@ -110,7 +118,7 @@ header img {
 
 footer {
     /*background-color: #5058A8;*/
-    background-color: rgb(202, 17, 0);
+    background-color: rgb(202,  17, 0);
     color: white;
     text-align: center;
 }
@@ -125,12 +133,15 @@ footer i {
     font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
     font-weight: 800;
     font-size: 22px;
-    background-color: white;
     /*color: #5058A8;*/
     color: black;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 50px;
+    background-color: white;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #index-logo i {
@@ -139,8 +150,7 @@ footer i {
 }
 
 .index-box {
-    background-color: white;
-    color: black;
+    color: white;
     /*color: #5058A8;*/
 }
 
@@ -149,6 +159,11 @@ footer i {
 }
 
 /* Register page */
+
+#signup_form ul {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 .login li, #signup_form li {
     list-style: none;
@@ -160,9 +175,7 @@ footer i {
     width: 150px;
 }
 
-/* This is to help the text on the page stand out from the background image */
 .text-overlay {
-    background: rgba(255, 255, 255, 0.97); /* White with 50% transparency */
     padding: 10px 0px; /* Adjust padding as needed */
     display: inline-block; /* Ensures effect only takes up the width of the text */
     border-radius: 5px; /* Adds rounded corners */
@@ -174,17 +187,10 @@ footer i {
     width: 125px;
 }
 
-.welcome {
-    text-align: center;
-    justify-content: center;
-    opacity: 0.8;
-}
-
-.signing {
-    color: black;
+.box-structure {
+    color: white;
     font-weight: 600;
     text-align: center;
-    background-color: white;
 }
 
 .loginmessage {
