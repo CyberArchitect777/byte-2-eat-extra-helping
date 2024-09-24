@@ -160,6 +160,11 @@ footer i {
 
 /* Register page */
 
+#signup_form ul {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .login li, #signup_form li {
     list-style: none;
     margin-top: 10px;
@@ -170,9 +175,7 @@ footer i {
     width: 150px;
 }
 
-/* This is to help the text on the page stand out from the background image */
 .text-overlay {
-    background: rgba(255, 255, 255, 0.97); /* White with 50% transparency */
     padding: 10px 0px; /* Adjust padding as needed */
     display: inline-block; /* Ensures effect only takes up the width of the text */
     border-radius: 5px; /* Adds rounded corners */
