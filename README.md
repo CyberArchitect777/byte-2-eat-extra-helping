@@ -39,24 +39,28 @@ This site was created using the following technologies:
 
 ## Team
 
+### Current Team
+
 The following individuals are involved in creating this project: 
 
 - Christina Hughes (https://github.com/CHughes13)
 
 - Barrie Millar (https://github.com/CyberArchitect777)
 
+### Previous Team
+
 The original team involved in producing the original Byte 2 Eat project are shown below. A lot of the programming and assets used in the original are also naturally used in this project.
 
 The full-time developers:
 
-    Christina Hughes - (https://github.com/CHughes13)
-    Barrie Millar - (https://github.com/CyberArchitect777)
-    Samuel Parker - (https://github.com/SamuelParkerTech)
+- Christina Hughes - (https://github.com/CHughes13)
+- Barrie Millar - (https://github.com/CyberArchitect777)
+- Samuel Parker - (https://github.com/SamuelParkerTech)
 
 Asset additions only:
 
-    Jamie Pudsey - (https://github.com/JPudsey-11)
-    Aeryx Rose - (https://github.com/SubjugatorofCSS)
+- Jamie Pudsey - (https://github.com/JPudsey-11)
+- Aeryx Rose - (https://github.com/SubjugatorofCSS)
 
 ## Credits
 
