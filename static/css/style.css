@@ -213,6 +213,14 @@ footer i {
 
 /* About Page */
 
+.member-list {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    text-align: left;
+}
+
 #aboutbyte {
     text-align: center;
 }

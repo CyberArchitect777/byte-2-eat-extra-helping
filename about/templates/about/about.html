@@ -1,60 +1,57 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
-<!-- Content from Base.HTML after this block-->
 
-<!-- About Byte2Eat -->
-
-<div class="container-fluid mt-5">
-    <div class="container" id="aboutbyte">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-12 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ about.title }}</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ about.about_byte2eat | safe }}</li>
-                        <li class="list-group-item">{{ about.about_snackoverflow | safe }}</li>
-                    </ul>
-                </div>
-            </div>
+<div class="container welcome">
+    <div class="row mt-5 fg-white">
+        <div>
+            <h1>Welcome to Byte 2 Eat: Extra Helping</h1>
+            <h2 class="mt-5">Your Ultimate Takeaway Review Hub</h2>
+            <p class="mt-5">Byte 2 Eat: Extra Helping is a platform designed for discerning food enthusiasts who are
+                passionate
+                about documenting and analyzing their takeaway experiences. Our mission is to provide you with an
+                intuitive space to record, track and review every takeaway meal, helping you make informed decisions
+                and discover the best food options available.</p>
+            <p class="mt-5">On this site, we understand that each meal is a unique experience. Whether it’s your go-to Friday night
+                pizza or a spontaneous late-night curry, our platform allows you to capture the essence of each dish
+                with detailed reviews and ratings. Track your preferences, revisit your top picks, and even notice
+                trends in your dining choices over time.</p>
+            <h1 class="mt-5">About Us</h1>
+            <p class="mt-5">Byte 2 Eat: Extra Helping is a revamp of the original Byte 2 Eat project found <a href="https://hackathon3-byte-to-eat-project-25fab4e92590.herokuapp.com/about/">here</a> (GitHub: <a href="https://github.com/CyberArchitect777/hackathon3-byte-to-eat-project/tree/main">found here</a>). Two of the original team members are involved in this remake which is designed to overcome any limitations of the original and add new features. More information on the people involved in both projects are shown below:-</p>
+            <table class="table mt-3 table-dark d-flex justify-content-center">
+                <tr>
+                    <th>Name</th>
+                    <th>Projects</th>
+                    <th>Links</th>
+                </tr>
+                <tr>
+                    <td>Barrie Millar</td>
+                    <td>Full involvement in both</td>
+                    <td><a href="https://github.com/CyberArchitect777">GitHub</a> - <a href="https://cyberarchitect777.github.io/personal-site/">Personal Site</a></td>
+                </tr>
+                <tr>
+                    <td>Chistina Hughes</td>
+                    <td>Full involvement in both</td>
+                    <td><a href="https://github.com/CHughes13">GitHub</a></td>
+                </tr>
+                <tr>
+                    <td>Samuel Parker</td>
+                    <td>Full involvement in original project only</td>
+                    <td><a href="https://github.com/SamuelParkerTech">GitHub</a></td>
+                </tr>
+                <tr>
+                    <td>Aeryx Rose</td>
+                    <td>Part-time involvement in original project only</td>
+                    <td><a href="https://github.com/SubjugatorofCSS">GitHub</a></td>
+                </tr>
+                <tr>
+                    <td>Jamie Pudsey</td>
+                    <td>Part-time involvement in original project only</td>
+                    <td><a href="https://github.com/JPudsey-11">GitHub</a></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
-
-
-<!-- About US  -->
-<div class="container-fluid my-5" id="snackprofile">
-    <div class="row justify-content-center">
-        <h2>Meet the Team!</h2>
-        <!-- Code to be iterated to create numerous cards from database -->
-        {% for profile in profile_list %}
-        <div class="col-lg-2 col-md-6 col-sm-12 mb-4 link_highlight">
-            <div class="card border h-100">
-                <div class="image-container">
-                    {% if "placeholder" in profile.image.url %}
-                    <img src="{% static 'images/profile.jpg' %}" 
-                         class="card-img-top" 
-                         alt="(placeholder image)">
-                    {% else %}
-                    <img src="{{ profile.image.url }}" 
-                         class="card-img-top" 
-                         alt="Profile Image {{ profile.profile_name }}">
-                    {% endif %}
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{ profile.profile_name | safe }}</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>About: </strong>{{ profile.about_profile | safe }}</li>
-                    <li class="list-group-item"><strong>Fun Fact: </strong>{{ profile.funfact | safe }}</li>
-                </ul>
-            </div>
-        </div>
-        <!-- End of iterated code-->
-        {% endfor %}
-    </div>
-</div>
-
 
 {% endblock content %}
