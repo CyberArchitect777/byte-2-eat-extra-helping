@@ -230,6 +230,7 @@ footer i {
 
 .member-list th, .member-list td {
     border-right: 1px solid white;
+    padding: 10px 5px;
 }
 
 .member-list a {
