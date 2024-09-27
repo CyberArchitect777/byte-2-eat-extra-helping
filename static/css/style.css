@@ -13,6 +13,10 @@
     background-color: white;
 }
 
+.white-links a {
+    color: white;
+}
+
 .bg-sitered {
     background-color: rgba(202,  17, 0, 0.8)
 }
@@ -214,11 +218,22 @@ footer i {
 /* About Page */
 
 .member-list {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    list-style: none;
-    text-align: left;
+    background-color: black;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid white;
+}
+
+.member-list tr {
+    border-bottom: 1px solid white;
+}
+
+.member-list th, .member-list td {
+    border-right: 1px solid white;
+}
+
+.member-list a {
+    color: white;
 }
 
 #aboutbyte {
