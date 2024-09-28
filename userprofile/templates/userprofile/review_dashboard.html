@@ -62,7 +62,7 @@
         My Takeaway Reviews</h1>
     {% if user_reviews %}
     <!-- Cards view -->
-    <div class="d-flex flex-wrap justify-content-center">
+    <div>
         {% for review in user_reviews %}
         <section class="modal" id="delete-modal{{ review.pk }}" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
@@ -85,17 +85,17 @@
                 </div>
             </div>
         </section>
-        <div class="card bg-dark text-white mb-4">
+        <div class="card mx-auto bg-dark text-white mb-4">
             <div class="card-body">
-                <h5 class="card-text text-center">{{ review.takeaway_name }} - {{ review.food_type }}</h5>
+                <h5 class="card-text text-center mb-4">{{ review.takeaway_name }} - {{ review.food_type }}</h5>
                 <div class="d-flex">
                     <a href="{% url 'edit_review' review.pk %}"
                         class="btn btn-primary btn-sm me-auto px-3 py-2">Edit</a>
-                    <p class="card-text text-center ms-1">{{ review.rating|star_rating|safe }}</p>
+                    <p class="card-text text-center my-auto">{{ review.rating|star_rating|safe }}</p>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal{{ review.pk }}"
                         aria-label="Deletes the review chosen" class="btn btn-danger btn-sm ms-auto py-2">Delete</a>
                 </div>
-                <p class="card-text text-center">{{ review.review_title }}</p>
+                <p class="card-text text-center mt-4">{{ review.review_title }}</p>
                 <p class="card-text text-center">{{ review.review_content }}</p>
                 <p class="card-text text-center">{{ review.created_on }}</p>
             </div>
@@ -119,12 +119,12 @@
             <tbody>
                 {% for review in user_reviews %}
                 <tr>
-                    <td>{{ review.created_on }}</td>
-                    <td>{{ review.takeaway_name }}</td>
-                    <td>{{ review.food_type }}</td>
-                    <td>{{ review.rating|star_rating|safe }}</td>
-                    <td>{{ review.review_title }}</td>
-                    <td>{{ review.review_content }}</td>
+                    <td class="set-vertical-align">{{ review.created_on }}</td>
+                    <td class="set-vertical-align">{{ review.takeaway_name }}</td>
+                    <td class="set-vertical-align">{{ review.food_type }}</td>
+                    <td class="set-vertical-align">{{ review.rating|star_rating|safe }}</td>
+                    <td class="set-vertical-align">{{ review.review_title }}</td>
+                    <td class="set-vertical-align">{{ review.review_content }}</td>
                     <td class="set-vertical-align">
                         <a href="{% url 'edit_review' review.pk %}"
                             class="btn btn-primary btn-sm d-flex justify-content-center">Edit</a>

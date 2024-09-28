@@ -281,9 +281,6 @@ footer i {
 }
 
 #review-area .card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
     width: 270px;
 }
 
@@ -300,12 +297,25 @@ footer i {
 
 /* Media queries */
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 500px) {
+
+    #review-area .card {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
 
     /* Index page */
 
     #company-logo {
         max-width: 600px;
+    }
+
+    /* Review page */
+
+    #review-area .card {
+        width: 600px;
     }
 }
 
