@@ -295,6 +295,12 @@ footer i {
     margin-top: 40px;
 }
 
+/* Edit review */
+
+#edit-review label {
+    width: 130px;
+}
+
 /* Media queries */
 
 @media only screen and (min-width: 500px) {
