@@ -5,7 +5,7 @@ urlpatterns = [
     # path("", views.review_dashboard, name="review_dashboard"),
 
     # User dashboard page where they can see all their review
-    path("review_dashboard/", views.review_dashboard, name="review_dashboard"),
+    path("takeaway_dashboard/", views.review_dashboard, name="takeaway_dashboard"),
 
     # So User can add a new review
     path("add_review/", views.add_review, name="add_review"),

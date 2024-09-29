@@ -62,8 +62,8 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/review-dashboard/' %}{% endif %}"
-                                aria-current="page" href="{% url 'review_dashboard' %}">My Reviews</a>
+                            <a class="nav-link {% if request.path == '/takeaway-dashboard/' %}{% endif %}"
+                                aria-current="page" href="{% url 'takeaway_dashboard' %}">My Takeaways</a>
                         </li>
                         <!-- "Log out" tab will appear on the Navbar when user is logged in -->
                         <li class="nav-item">

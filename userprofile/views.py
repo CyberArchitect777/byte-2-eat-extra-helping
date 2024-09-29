@@ -13,7 +13,7 @@ from django.views.generic import TemplateView
 
 # User dashboard that shows all their reviews
 @login_required
-def review_dashboard(request):
+def takeaway_dashboard(request):
     allowed_sort_fields = [
         "takeaway_name", "food_type", "rating", "created_on"
     ]
@@ -34,7 +34,7 @@ def review_dashboard(request):
 
     return render(
         request,
-        "userprofile/review_dashboard.html",
+        "userprofile/takeaway_dashboard.html",
         {
             "user_reviews": user_reviews,
         }
@@ -75,7 +75,7 @@ def add_review(request, review_id=None):
             messages.add_message(
                 request, messages.SUCCESS, "Review successfully added."
             )
-            return redirect("review_dashboard")  # Redirects User to dashboard
+            return redirect("takeaway_dashboard")  # Redirects User to dashboard
             # with all their reviews
 
     # This block handles the GET requests and displays the form
@@ -96,17 +96,17 @@ def edit_review(request, pk):
     try:
         review = Review.objects.get(pk=pk)
     except Review.DoesNotExist as e:
-        return redirect("review_dashboard")  # Redirects User to dashboard
+        return redirect("takeaway_dashboard")  # Redirects User to dashboard
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             review.save()
-        return redirect("review_dashboard")
+        return redirect("takeaway_dashboard")
     else:
         if request.user == review.poster:
             form = ReviewForm(instance=review)
         else:
-            return redirect("review_dashboard")
+            return redirect("takeaway_dashboard")
     return render(
         request,
         "userprofile/edit_review.html",
@@ -118,4 +118,4 @@ def edit_review(request, pk):
 def delete_review(request, pk):
     review = Review.objects.get(pk=pk)
     review.delete()
-    return redirect("review_dashboard")  # Redirects User to dashboard
+    return redirect("takeaway_dashboard")  # Redirects User to dashboard
