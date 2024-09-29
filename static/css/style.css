@@ -37,7 +37,7 @@ main {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/dp1ehadna/image/upload/v1727013223/pile-8737346_1920_v6sdn2.jpg") no-repeat center/cover fixed;
 }
 
-/* Multi-purpose styles */
+/* Multi-page styles */
 
 .signingbutton {
     background-color: #F4C542; 
@@ -62,6 +62,15 @@ main {
 .welcome {
     text-align: center;
     justify-content: center;
+}
+
+#add-review, #edit-review {
+    background-color: transparent;
+    color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
 }
 
 /* Header styles */
@@ -284,29 +293,43 @@ footer i {
     width: 270px;
 }
 
-/* Add review */
-
-#add-review {
-    background-color: transparent;
-    color: white;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-}
-
-/* Edit review */
+/* Edit review page */
 
 #edit-review label {
-    width: 130px;
+    display: block;
+}
+
+#edit-review input {
+    width: 100%;
+}
+
+#edit-review select {
+    width: 100%;
+}
+
+#edit-review .edit-button {
+    width: 100%;
 }
 
 /* Media queries */
+
+@media only screen and (min-width: 400px) {
+    
+    /* Edit review page */
+
+    #edit-review label {
+        width: 130px;
+    }
+}
 
 @media only screen and (min-width: 500px) {
 
     #review-area .card {
         width: 400px;
+    }
+
+    #edit-review .edit-button {
+        width: 140px;
     }
 }
 
