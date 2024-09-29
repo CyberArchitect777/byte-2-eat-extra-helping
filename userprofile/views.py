@@ -93,7 +93,10 @@ def add_review(request, review_id=None):
 # Edit a review
 @login_required
 def edit_review(request, pk):
-    review = Review.objects.get(pk=pk)
+    try:
+        review = Review.objects.get(pk=pk)
+    except Review.DoesNotExist as e:
+        return redirect("review_dashboard")  # Redirects User to dashboard
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
@@ -101,7 +104,10 @@ def edit_review(request, pk):
         return redirect("review_dashboard")  # Redirects User to dashboard
         # with all their reviews
     else:
-        form = ReviewForm(instance=review)
+        if request.user == review.poster:
+            form = ReviewForm(instance=review)
+        else:
+            return redirect("review_dashboard")  # Redirects User to dashboard
     return render(
         request,
         "userprofile/edit_review.html",
