@@ -4,15 +4,18 @@
 
 {% block content %}
 
-<h2>Delete Review Confirmation</h2>
+<!--<section class="fg-white bg-dark">
+    <h2>Delete Review Confirmation</h2>
 
-<p>Are you sure you want to delete your review for {{ object.takeaway_name }} you wrote on
-    {{ object.created_on }} ?</p>
+    <p>Are you sure you want to delete your review for {{ object.takeaway_name }} you wrote on
+        {{ object.created_on }} ?</p>
 
-<form method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-danger btn-sm">Yes, delete my Review</button>
-    <a href="{% url 'review_dashboard' %}" class="btn btn-warning btn-sm">No, keep my Review</a>
-</form>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger btn-sm">Yes, delete my Review</button>
+        <a href="{% url 'review_dashboard' %}" class="btn btn-warning btn-sm">No, keep my Review</a>
+    </form>
+</section>-->
+
 
 {% endblock %}
