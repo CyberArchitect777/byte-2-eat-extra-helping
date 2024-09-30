@@ -9,16 +9,8 @@
     color: white;
 }
 
-.bg-white {
-    background-color: white;
-}
-
 .white-links a {
     color: white;
-}
-
-.bg-sitered {
-    background-color: rgba(202,  17, 0, 0.8)
 }
 
 /* Font styles */
@@ -167,10 +159,6 @@ footer i {
     /*color: #5058A8;*/
 }
 
-#company-logo {
-    min-width: 270px;
-}
-
 /* Register page */
 
 #signup_form ul {
@@ -204,10 +192,6 @@ footer i {
     color: white;
     font-weight: 600;
     text-align: center;
-}
-
-.loginmessage {
-    text-align: right;
 }
 
 /* Dropdown Arrow */
@@ -244,35 +228,6 @@ footer i {
 
 .member-list a {
     color: white;
-}
-
-#aboutbyte {
-    text-align: center;
-}
-
-.image-container {
-    width: 100%;
-    padding-top: 75%; /* Aspect ratio 4:3 */
-    position: relative;
-    overflow: hidden;
-}
-
-.image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover
-}
-
-#snackprofile {
-    text-align: left;
-}
-
-#snackprofile h2 {
-    text-align: center;
-    padding-bottom: 20px;
 }
 
 .card {
@@ -334,12 +289,6 @@ footer i {
 }
 
 @media only screen and (min-width: 768px) {
-
-    /* Index page */
-
-    #company-logo {
-        max-width: 600px;
-    }
 
     /* Review page */
 
