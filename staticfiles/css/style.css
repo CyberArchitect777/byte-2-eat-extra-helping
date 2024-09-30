@@ -13,6 +13,10 @@
     background-color: white;
 }
 
+.white-links a {
+    color: white;
+}
+
 .bg-sitered {
     background-color: rgba(202,  17, 0, 0.8)
 }
@@ -33,7 +37,7 @@ main {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/dp1ehadna/image/upload/v1727013223/pile-8737346_1920_v6sdn2.jpg") no-repeat center/cover fixed;
 }
 
-/* Multi-purpose styles */
+/* Multi-page styles */
 
 .signingbutton {
     background-color: #F4C542; 
@@ -58,6 +62,15 @@ main {
 .welcome {
     text-align: center;
     justify-content: center;
+}
+
+#add-review, #edit-review {
+    background-color: transparent;
+    color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
 }
 
 /* Header styles */
@@ -213,6 +226,26 @@ footer i {
 
 /* About Page */
 
+.member-list {
+    background-color: black;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid white;
+}
+
+.member-list tr {
+    border-bottom: 1px solid white;
+}
+
+.member-list th, .member-list td {
+    border-right: 1px solid white;
+    padding: 10px 5px;
+}
+
+.member-list a {
+    color: white;
+}
+
 #aboutbyte {
     text-align: center;
 }
@@ -257,28 +290,61 @@ footer i {
 }
 
 #review-area .card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
     width: 270px;
 }
 
-/* Add review */
+/* Edit review page */
 
-#add-review label {
-    background-color: white;
-    padding-left: 10px;
-    padding-right: 10px;
+#edit-review label {
+    display: block;
+}
+
+#edit-review input {
+    width: 100%;
+}
+
+#edit-review select {
+    width: 100%;
+}
+
+#edit-review .edit-button {
+    width: 100%;
 }
 
 /* Media queries */
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 400px) {
+    
+    /* Edit review page */
+
+    #edit-review label {
+        width: 130px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+
+    #review-area .card {
+        width: 400px;
+    }
+
+    #edit-review .edit-button {
+        width: 140px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
 
     /* Index page */
 
     #company-logo {
         max-width: 600px;
+    }
+
+    /* Review page */
+
+    #review-area .card {
+        width: 600px;
     }
 }
 
