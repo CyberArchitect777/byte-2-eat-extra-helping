@@ -1,15 +1,13 @@
 <!-- Base template code found on all pages imported here -->
 {% extends "base.html" %}
-{% load i18n %}
 {% load account socialaccount %}
-{% load static %}
 
 {% block content %}
-<!-- Start a block if you intend to override it in child templates -->
 
 <div class="container welcome">
   <div class="row mt-5">
     <div id="index-logo" class="d-flex justify-content-center">
+      <!-- Use pizza icon from Font Awesome -->
       <i class="fa-solid fa-pizza-slice me-2"></i>Byte 2 Eat: <span class="fg-red">&nbsp;Extra Helping</span>
     </div>
     <h1 class="index-box my-auto py-5 mt-2"><strong>A private takeaway review website where your words are
@@ -26,7 +24,7 @@
   <!-- If user is NOT logged in display sign in details -->
   {% if user.is_authenticated %}
     <div class="row mb-3">
-      <div class="col-md-8 mt-3 offset-md-0  d-flex justify-content-center flex-grow-1">
+      <div class="col-md-8 mt-3 offset-md-0 d-flex justify-content-center flex-grow-1">
         <a href="{% url 'takeaway_dashboard' %}" class="btn signingbutton mb-4 d-flex justify-content-center align-items-center">Take me to my Dashboard</a>
       </div>
     </div>
@@ -39,7 +37,7 @@
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
-          <button class="btn signingbutton mt-3 d-flex justify-content-center align-items-center" type="submit">{% trans "Log In" %}</button>
+          <button class="btn signingbutton mt-3 d-flex justify-content-center align-items-center" type="submit">Log In</button>
         </form>
       </div>
     </div>

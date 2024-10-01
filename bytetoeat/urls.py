@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 from index import views as index_views
 from about import views as about_views
-from userprofile import views as profile_views
 
 urlpatterns = [
     path("about/", about_views.display_about, name="about"),

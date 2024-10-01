@@ -13,7 +13,6 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 
-
 def display_index(request):
 
     return render(
@@ -21,7 +20,6 @@ def display_index(request):
         "index/index.html", {
         }
     )
-
 
 class ReviewList(generic.ListView):
     queryset = Review.objects.all()
@@ -32,7 +30,6 @@ class ReviewList(generic.ListView):
         return Review.objects.filter(status=1).annotate(
             average_rating=Avg('reviews__rating')
         ).order_by('Review_name')
-
 
 def takeaway_detail(request, slug):
     queryset = Review.objects.filter(status=1)
@@ -73,7 +70,6 @@ def takeaway_detail(request, slug):
         },
     )
 
-
 def review_edit(request, slug, review_id):
     if request.method == "POST":
         queryset = Review.objects.filter(status=1)
@@ -101,7 +97,6 @@ def review_edit(request, slug, review_id):
                 request, messages.ERROR, 'Error updating Review!'
             )
     return HttpResponseRedirect(reverse('index', args=[slug]))
-
 
 def review_delete(request, slug, review_id):
     queryset = Review.objects.filter(status=1)
