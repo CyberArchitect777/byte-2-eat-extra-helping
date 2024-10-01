@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'crispy_forms', 
     'crispy_bootstrap5',
     'cloudinary_storage',
-    'django_summernote',
     'cloudinary',
     'index',
     'userprofile',

@@ -23,7 +23,6 @@ from userprofile import views as profile_views
 urlpatterns = [
     path("about/", about_views.display_about, name="about"),
     path("admin/", admin.site.urls),
-    path("summernote/", include("django_summernote.urls")),
     path("accounts/", include("allauth.urls")),
     path("reviews/", include("userprofile.urls"), name="userprofile-urls"),
     path("", index_views.display_index, name="index"),
