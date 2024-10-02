@@ -20,12 +20,14 @@
 /* Page styles */
 
 body {
+    /* Make the page take up the full screen even without enough content for it */
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
 
 main {
+    /* Set up a background wallpaper which has been darkened */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/dp1ehadna/image/upload/v1727699466/pile-8737346_1920_compressed_rdixpb.jpg") no-repeat center/cover fixed;
 }
 
@@ -57,6 +59,7 @@ main {
 }
 
 #add-review, #edit-review {
+    /* Set up form styles for add and edit reviews */
     background-color: transparent;
     color: white;
     max-width: 800px;
@@ -65,10 +68,24 @@ main {
     margin-top: 40px;
 }
 
+/* Dropdown Arrow */
+
+.dropdown-arrow {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    padding-right: 24px;
+    /* Space for arrow */
+    font-size: 16px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><path fill="none" stroke="%23333" stroke-width="2" d="M1 1l5 5 5-5"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px 10px;
+}
+
 /* Header styles */
 
 header, nav {
-    /*background-color: #5058A8;*/
     background-color: rgb(202, 17, 0);
     color: white;
 }
@@ -77,14 +94,9 @@ header .nav-link, header .nav-brand {
     color: white;
 }
 
-.nav-link:focus, .nav-link:focus, .nav-link:focus-visible {
-    text-decoration: underline;
-    color: white;
-}
-
 .navbar-toggler {
-    color: #fff;
-    border-color: #fff; 
+    /* Place a border around the nav-menu on mobile view */
+    border-color: #fff;
 }
 
 .navbar-toggler-icon {
@@ -93,6 +105,7 @@ header .nav-link, header .nav-brand {
 }
 
 .navbar-collapse {
+    /* Place menu items in the center of the dropdown view on mobile */
     text-align: center;
 }
 
@@ -101,13 +114,13 @@ header img {
 }
 
 .navbar-brand {
+    /* Set up the style for the site logo in the navbar */
     font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
     font-weight: 800;
     font-size: 14px;
     height: 39.6px;
     background-color: white;
     color: black;
-    /*color: #5058A8;*/
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -116,13 +129,11 @@ header img {
 
 .navbar-brand:hover {
     color: black;
-    /*color: #5058A8;*/
 }
 
 /* Footer styles */
 
 footer {
-    /*background-color: #5058A8;*/
     background-color: rgb(202,  17, 0);
     color: white;
     text-align: center;
@@ -135,10 +146,10 @@ footer i {
 /* Index page */
 
 #index-logo {
+    /* Set up a bigger site logo for the index page */
     font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
     font-weight: 800;
     font-size: 22px;
-    /*color: #5058A8;*/
     color: black;
     padding-left: 10px;
     padding-right: 10px;
@@ -156,7 +167,6 @@ footer i {
 
 .index-box {
     color: white;
-    /*color: #5058A8;*/
 }
 
 /* Register page */
@@ -177,7 +187,7 @@ footer i {
 }
 
 .text-overlay {
-    padding: 10px 0px; /* Adjust padding as needed */
+    padding: 10px 0px;
     display: inline-block; /* Ensures effect only takes up the width of the text */
     border-radius: 5px; /* Adds rounded corners */
 }
@@ -194,23 +204,10 @@ footer i {
     text-align: center;
 }
 
-/* Dropdown Arrow */
-.dropdown-arrow {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    padding-right: 24px;
-    /* Space for arrow */
-    font-size: 16px;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><path fill="none" stroke="%23333" stroke-width="2" d="M1 1l5 5 5-5"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 12px 10px;
-}
-
 /* About Page */
 
 .member-list {
+    /* Table style for project contributor list */
     background-color: black;
     width: 100%;
     max-width: 800px;
@@ -237,10 +234,11 @@ footer i {
 /* Reviews page */
 
 .set-vertical-align {
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 #table-element {
+    /* Hide table display on small screems */
     display: none;
 }
 
@@ -279,9 +277,13 @@ footer i {
 
 @media only screen and (min-width: 500px) {
 
+    /* Reviews page */
+
     #review-area .card {
         width: 400px;
     }
+
+    /* Edit review page */
 
     #edit-review .edit-button {
         width: 140px;
@@ -302,11 +304,13 @@ footer i {
     /* Review page */
 
     #table-element {
+        /* Enable table display */
         display: block;
         text-align: center;
     }
 
     #review-area .card {
+        /* Disable cards display */
         display: none;
     }
 }
