@@ -1,21 +1,17 @@
 {% extends "base.html" %}
-
-{% load i18n %}
 {% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
 
 <div class="container mt-5 pb-4 box-structure">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <h1 class="mt-2">{% trans "Login" %}</h1>
+      <h1 class="mt-2">Login</h1>
 
-      <p class="m-3">{% blocktrans %}Welcome back to Byte 2 Eat.<br></p>
-        <p>To leave a review and rating of your favourite takeaways, please log in.<br></p>
+      <p class="m-3">Welcome back to Byte 2 Eat</p>
+        <p>To leave a review and rating of your favourite takeaways, please log in.</p>
         <p>If you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-        first.{% endblocktrans %}</p>
+        first.</p>
     </div>
   </div>
   <div class="row">
@@ -24,9 +20,9 @@
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn signingbutton" type="submit">{% trans "Log In" %}</button>
+        <button class="btn signingbutton" type="submit">Log In</button>
       </form>
     </div>
   </div>
