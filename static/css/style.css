@@ -13,10 +13,6 @@
     color: white;
 }
 
-/* Font styles */
-
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap');
-
 /* Page styles */
 
 body {
@@ -115,7 +111,7 @@ header img {
 
 .navbar-brand {
     /* Set up the style for the site logo in the navbar */
-    font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
+    font-family: "Roboto Slab", "Roboto", "Open Sans", sans-serif;
     font-weight: 800;
     font-size: 14px;
     height: 39.6px;
