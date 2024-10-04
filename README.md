@@ -43,7 +43,7 @@ This site was created using the following technologies:
 
 Only one developer shown below was responsible for designing and coding this successor project. A lot of the programming from the original is still naturally used though.
 
-- Barrie Millar (https://github.com/CyberArchitect777)
+- Barrie Millar - (https://github.com/CyberArchitect777)
 
 ### Base Project - Byte 2 Eat
 
