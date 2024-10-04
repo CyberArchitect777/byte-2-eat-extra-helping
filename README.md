@@ -1,6 +1,6 @@
 
 # Byte 2 Eat: Extra Helping
-## By Christina Hughes and Barrie Millar
+## By Barrie Millar
 ### A Private Takeaway Review Site
 
 ## Introduction
@@ -37,19 +37,17 @@ This site was created using the following technologies:
 - Google Fonts
 - Font Awesome
 
-## Team
+## Developers
 
-### Current Team
+### Current Project - Byte 2 Eat: Extra Helping
 
-The following individuals are involved in creating this project: 
-
-- Christina Hughes (https://github.com/CHughes13)
+Only one developer shown below was responsible for designing and coding this successor project. A lot of the programming from the original is still naturally used though.
 
 - Barrie Millar (https://github.com/CyberArchitect777)
 
-### Previous Team
+### Base Project - Byte 2 Eat
 
-The original team involved in producing the original Byte 2 Eat project are shown below. A lot of the programming and assets used in the original are also naturally used in this project.
+The original team involved in producing the original Byte 2 Eat project are shown below.
 
 The full-time developers:
 
@@ -64,6 +62,6 @@ Asset additions only:
 
 ## Credits
 
-These assets were used in the creation of this site. Our thanks to the original authors involved in their creation.
+These assets were used in the creation of this site. Thanks to the original authors involved in their creation.
 
 - Site background image - By <a href="https://pixabay.com/users/serenityart-38195676/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8737346">SerenityArt</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8737346">Pixabay</a>
