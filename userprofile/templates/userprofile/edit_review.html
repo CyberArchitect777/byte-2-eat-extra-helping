@@ -1,14 +1,18 @@
+
 <!-- Edit Review Template -->
 
 {% extends "base.html" %}
 
 {% block content %}
 
+<!-- Confirmation modal for each review deletion on edit page -->
 <section class="modal" id="delete-modal{{ review.pk }}" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
+        <!-- Modal set to dark bootstrap colours -->
         <div class="modal-content bg-dark fg-white">
             <div class="modal-header">
                 <h5 class="modal-title">Delete Review</h5>
+                <!-- Close window cross set to white colour -->
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
@@ -26,6 +30,7 @@
     </div>
 </section>
 
+<!-- Edit review display section -->
 <section id="edit-review">
     <h2 class="fg-white mt-4 mb-3 text-center">Edit My Review</h2>
 
@@ -33,6 +38,7 @@
         {% csrf_token %}
         {{ form.as_p }}
     
+        <!-- Button dashboard -->
         <div class="mt-4 mb-4 d-flex justify-content-center">
             <button type="submit" class="edit-button btn btn-warning btn-sm">Update my Review</button>
             <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal{{ review.pk }}" aria-label="Deletes the current review" class="edit-button btn btn-danger btn-sm">Delete my Review</a>
