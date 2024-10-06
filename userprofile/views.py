@@ -99,6 +99,10 @@ def edit_review(request, pk):
 # Delete a review
 @login_required
 def delete_review(request, pk):
-    review = Review.objects.get(pk=pk)
-    review.delete()
+    try:
+        review = Review.objects.get(pk=pk)
+    except Review.DoesNotExist as e:
+        return redirect("takeaway_dashboard")
+    if review.poster == request.user: # Only delete the review if the user logged in is the one who wrote the review
+        review.delete()
     return redirect("takeaway_dashboard")  # Redirects User to dashboard
