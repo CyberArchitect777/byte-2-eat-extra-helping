@@ -1,15 +1,10 @@
-from django.contrib.auth.decorators import login_required
 # Ensures only logged-in users will see this page
-from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.contrib.auth.decorators import login_required
 # Shortcut for rendering a template and returning an HTTP response
-from django.contrib import messages
-# Django's built-in messaging system/feedback to user
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy  # Handles URL redirection
 from index.models import Review  # Import Review model
 from index.forms import ReviewForm  # Import Review form
-from django.views.generic import TemplateView
-# Star ratings instead of numbers
-
 
 # User dashboard that shows all their reviews
 @login_required
@@ -40,21 +35,13 @@ def takeaway_dashboard(request):
         }
     )
 
-
 # Add a review
 def add_review(request, review_id=None):
-    # Checks that a valid user is logged in. If not, user will get a message
-    # and be redirected to the login page.
+    # Checks that a valid user is logged in. If not, users will be redirected to the login page.
     if not request.user.is_authenticated:
-        messages.add_message(
-            request, messages.ERROR,
-            "You need to be logged in to add a review."
-        )
         return redirect(reverse("account_login"))
 
-    if review_id:  # Checks to see if review_id is provided - this means it's
-        # checking if that review already exists and will populate it with
-        # data from that review
+    if review_id:  # Checks to see if review_id is provided
         review = get_object_or_404(Review, id=review_id)
         # If there is a review_id, then the form will populate with data from
         # that existing review
@@ -72,9 +59,6 @@ def add_review(request, review_id=None):
             review.poster = request.user  # Assigns the logged-in user to the
             # review
             review.save()  # Now saves form to the database
-            messages.add_message(
-                request, messages.SUCCESS, "Review successfully added."
-            )
             return redirect("takeaway_dashboard")  # Redirects User to dashboard
             # with all their reviews
 
@@ -89,24 +73,23 @@ def add_review(request, review_id=None):
         {"form": form, "review": review}
     )
 
-
 # Edit a review
 @login_required
 def edit_review(request, pk):
     try:
         review = Review.objects.get(pk=pk)
     except Review.DoesNotExist as e:
-        return redirect("takeaway_dashboard")  # Redirects User to dashboard
-    if request.method == "POST":
+        return redirect("takeaway_dashboard")  # Redirects User to dashboard if review being edited doesn't exist
+    if request.method == "POST": # Form to database handling code if review is actually being submitted for edit
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             review.save()
         return redirect("takeaway_dashboard")
-    else:
-        if request.user == review.poster:
+    else: # If the editing submission process is not underway
+        if request.user == review.poster: # Check to see if the current user matches the review posters (essential for security)
             form = ReviewForm(instance=review)
         else:
-            return redirect("takeaway_dashboard")
+            return redirect("takeaway_dashboard") # Return to dashboard if not
     return render(
         request,
         "userprofile/edit_review.html",
