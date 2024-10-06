@@ -129,7 +129,7 @@
                     <td class="set-vertical-align">
                         <a href="{% url 'edit_review' review.pk %}"
                             class="btn btn-primary btn-sm d-flex justify-content-center">Edit</a>
-                        <a href="{% url 'delete_review' review.pk %}"
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal{{ review.pk }}"
                             class="btn btn-danger btn-sm d-flex justify-content-center">Delete</a>
                     </td>
                 </tr>
