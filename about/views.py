@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def display_about(request):
 
     return render(
