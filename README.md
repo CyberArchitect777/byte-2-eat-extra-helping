@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Welcome to Byte 2 Eat: Extra Helping, a website designed to allow private users to review takeaways without having to make any public declaration. This offers a chance for highly personal reviews to be left of any standard without any legal consequences, controversy or concerns for how it may look. The project is based on the original Byte 2 Eat site which was created during Hackathon 3 of the "16-Week High-Performance Full Stack Skills Bootcamp" at Code Institute. Two of the developers involved from that project are responsible for this one. The purpose of this site is to expand on the feature set of the original project, improve the content currently provided and resolve outstanding issues that the developers would liked to have fixed originally.
+Welcome to Byte 2 Eat: Extra Helping, a website designed to allow private users to review takeaways without having to make any public declaration. This offers a chance for highly personal reviews to be left of any standard without any legal consequences, controversy or concerns for how it may look. The project is based on the original Byte 2 Eat site which was created during Hackathon 3 of the "16-Week High-Performance Full Stack Skills Bootcamp" at Code Institute. The developer creating this new successor project was one of those involved in the original. The purpose of this new site is to improve on the original project and resolve outstanding issues that the developer would liked to have fixed originally.
 
 ## Deployment And Repository
 
