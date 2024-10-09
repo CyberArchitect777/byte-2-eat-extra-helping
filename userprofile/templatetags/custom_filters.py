@@ -4,6 +4,7 @@ register = template.Library()
 
 # Converts ratings /5 in to stars
 
+
 @register.filter
 def star_rating(value):
     # Display stars graphically depending on the parameter value
