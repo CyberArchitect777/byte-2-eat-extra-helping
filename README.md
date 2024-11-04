@@ -7,6 +7,32 @@
 
 Welcome to Byte 2 Eat: Extra Helping, a website designed to allow private users to review takeaways without having to make any public declaration. This offers a chance for highly personal reviews to be left of any standard without any legal consequences, controversy or concerns for how it may look. The project is based on the original Byte 2 Eat site which was created during Hackathon 3 of the "16-Week High-Performance Full Stack Skills Bootcamp" at Code Institute. The developer creating this new successor project was one of those involved in the original. The purpose of this new site is to improve on the original project and resolve outstanding issues that the developer would liked to have fixed originally.
 
+## Development
+
+The following changes were made to this successor project when compared to the original:-
+
+- The site name and logo were rebranded to reflect the new successor project
+- A complete redesign of the interface colour scheme was made to all pages
+- The background wallpaper was changed to a totally different image utilising a black transparency filter
+- All known security issues found in the original project were resolved (details omitted)
+- The About page was redesigned completely to be static only with content suitable for the new project
+- A change was made to ensure that users could not delete reviews without confirmation on large screen sizes
+- All legacy code not used in the original project was removed along with other general code refactoring
+- The database schema was updated to reflect any decisions made about the data needed for this successor project
+- All known responsive issues on varying screen sizes were resolved
+- Checks were carried out to make sure that all custom code met PEP8 standards
+- The semantic site structure was improved
+- The site title and metadata were updated to apropriate values
+- Minor spelling issues were corrected
+- The dropdown navbar was changed to drop down the middle of the page and not the right of it
+- The Django-Summernote package was removed as it was not deemed required
+- Commenting was improved throughout the code
+- All commented-out code was removed
+- The fictitious company social media icons in the footer were removed as they were not deemed necessary for this project
+- The favicons were updated to reflect the new successor project
+- A "Dockerfile" file was created to configure the project for use in a Docker container
+- Various other style changes were made across the whole site
+
 ## Deployment And Repository
 
 ### Byte 2 Eat: Extra Helping
