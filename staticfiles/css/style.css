@@ -113,7 +113,7 @@ header img {
     /* Set up the style for the site logo in the navbar */
     font-family: "Roboto Slab", "Roboto", "Open Sans", sans-serif;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 13px;
     height: 39.6px;
     background-color: white;
     color: black;
@@ -145,7 +145,7 @@ footer i {
     /* Set up a bigger site logo for the index page */
     font-family: "Roboto Slab", "Sacramento", "Roboto", "Open Sans", sans-serif;
     font-weight: 800;
-    font-size: 22px;
+    font-size: 20px;
     color: black;
     padding-left: 10px;
     padding-right: 10px;
@@ -170,6 +170,7 @@ footer i {
 #signup_form ul {
     margin-top: 30px;
     margin-bottom: 30px;
+    padding-left: 0px;
 }
 
 .login li, #signup_form li {
