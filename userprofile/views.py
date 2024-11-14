@@ -19,7 +19,7 @@ def takeaway_dashboard(request):
 
     if request.method == "GET":
         selected_sort = request.GET.get("sort_by", "created_on")
-        selected_direction = request.GET.get("sort_order", "asc")
+        selected_direction = request.GET.get("sort_order", "desc")
         if selected_sort in allowed_sort_fields:
             direction_symbol = ""
             if selected_direction == "desc":
