@@ -17,7 +17,7 @@
         <div class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4">
 
             <!-- Options user can sort by -->
-            <select name="sort_by" class="form-control dropdown-arrow ">
+            <select name="sort_by" class="form-control dropdown-arrow " aria-label="Choose a category to sort on">
                 <option value="takeaway_name" {% if request.GET.sort_by == "takeaway_name" %}selected{% endif %}>
                     Takeaway Name</option>
                 <option value="food_type" {% if request.GET.sort_by == "food_type" %}selected{% endif %}>Food Type
@@ -31,7 +31,7 @@
 
         <!-- Option to sort list by ascending or descending -->
         <div class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 mt-2 mb-2">
-            <select name="sort_order" class="form-control dropdown-arrow ">
+            <select name="sort_order" class="form-control dropdown-arrow " aria-label="Choose ascending or descending">
                 <option value="asc" {% if request.GET.sort_order == 'asc' %}selected{% endif %}>Ascending</option>
                 <option value="desc" {% if request.GET.sort_order == 'desc' or request.GET.sort_order == None %}selected{% endif %}>Descending</option>
             </select>
@@ -39,7 +39,7 @@
 
         <!-- Sort button -->
         <div class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 mt-2">
-            <button type="submit" class="btn btn-primary w-100">Sort</button>
+            <button type="submit" class="btn btn-primary w-100" aria-label="Sort takeaways based on the options selected">Sort</button>
         </div>
 
         <!-- Add a review button -->
@@ -89,7 +89,7 @@
             <div class="card-body">
                 <h5 class="card-text text-center mb-4">{{ review.takeaway_name }} - {{ review.food_type }}</h5>
                 <div class="d-flex">
-                    <a href="{% url 'edit_review' review.pk %}"
+                    <a href="{% url 'edit_review' review.pk %}" aria-label="Edits the review chosen" 
                         class="btn btn-primary btn-sm me-auto px-3 py-2">Edit</a>
                     <p class="card-text text-center my-auto">{{ review.rating|star_rating|safe }}</p>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal{{ review.pk }}"
