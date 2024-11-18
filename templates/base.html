@@ -61,29 +61,25 @@
                         </li>
                         <!-- Menu items appear from here in a nav menu or on the navbar depending on screen sizes -->
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+                            <a class="nav-link{% if request.path == '/' %} bold{% endif %}" {% if request.path == '/' %}aria-current="page" {% endif %}href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{% url 'about' %}">About</a>
+                            <a class="nav-link{% if request.path == '/about/' %} bold{% endif %}" {% if request.path == '/about/' %}aria-current="page" {% endif %}href="{% url 'about' %}">About</a>
                         </li>
                         <!-- My reviews and logout will show if user is logged in, login and register if not -->
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/takeaway-dashboard/' %}{% endif %}"
-                                aria-current="page" href="{% url 'takeaway_dashboard' %}">My Reviews</a>
+                            <a class="nav-link{% if request.path == '/reviews/takeaway_dashboard/' %} bold{% endif %}" {% if request.path == '/reviews/takeaway_dashboard/' %}aria-current="page" {% endif %}href="{% url 'takeaway_dashboard' %}">My Reviews</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == logout_url %}{% endif %}" aria-current="page"
-                                href="{% url 'account_logout' %}">Logout</a>
+                            <a class="nav-link{% if request.path == '/accounts/logout/' %} bold{% endif %}" {% if request.path == '/accounts/logout/' %}aria-current="page" {% endif %}href="{% url 'account_logout' %}">Logout</a>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == login_url %}{% endif %}" aria-current="page"
-                                href="{% url 'account_login' %}">Login</a>
+                            <a class="nav-link{% if request.path == '/accounts/login/' %} bold{% endif %}" {% if request.path == '/accounts/login/' %}aria-current="page" {% endif %}href="{% url 'account_login' %}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == signup_url %}{% endif %}" aria-current="page"
-                                href="{% url 'account_signup' %}">Register</a>
+                            <a class="nav-link{% if request.path == '/accounts/signup/' %} bold{% endif %}" {% if request.path == '/accounts/signup/' %}aria-current="page" {% endif %}href="{% url 'account_signup' %}">Register</a>
                         </li>
                         {% endif %}
                     </ul>
