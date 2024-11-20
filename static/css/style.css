@@ -270,6 +270,14 @@ footer i {
     width: 100%;
 }
 
+#sort-form legend {
+    font-size: 200%;
+}
+
+#sort-form fieldset {
+    border: 2px solid grey;
+}
+
 /* Media queries */
 
 @media only screen and (min-width: 400px) {
