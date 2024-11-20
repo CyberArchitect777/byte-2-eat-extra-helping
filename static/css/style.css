@@ -175,6 +175,7 @@ footer i {
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 0px;
+    order: 1;
 }
 
 .login li, #signup_form li {
@@ -191,6 +192,10 @@ footer i {
     padding: 10px 0px;
     display: inline-block; /* Ensures effect only takes up the width of the text */
     border-radius: 5px; /* Adds rounded corners */
+}
+
+#signup_form button {
+    order: 2;
 }
 
 /* Sign in and Log Out pages */
