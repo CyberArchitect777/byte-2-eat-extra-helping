@@ -10,6 +10,7 @@
 <head>
     <title>Byte 2 Eat: Extra Helping</title>
     <meta charset="UTF-8">
+    <!-- Meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A private takeaway review website where your words are only for you!">
     <meta name="keywords" content="takeaway, review, words, private">
@@ -60,6 +61,8 @@
                             </div>
                         </li>
                         <!-- Menu items appear from here in a nav menu or on the navbar depending on screen sizes -->
+                        <!-- The current page menu item is displayed in bold for user page identification -->
+                        <!-- The aria-current attribute is also set -->
                         <li class="nav-item">
                             <a class="nav-link{% if request.path == '/' %} bold{% endif %}" {% if request.path == '/' %}aria-current="page" {% endif %}href="{% url 'index' %}">Home</a>
                         </li>

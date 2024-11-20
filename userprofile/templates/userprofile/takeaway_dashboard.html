@@ -14,7 +14,7 @@
         <fieldset class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 pt-3">
             <legend class="text-center fg-white">Sort by:</legend>
             <div>
-                <!-- Options user can sort by -->
+                <!-- Users can sort by the following criteria. The current type is selected in advance -->
                 <select name="sort_by" class="form-control dropdown-arrow " aria-label="Choose a category to sort on">
                     <option value="takeaway_name" {% if request.GET.sort_by == "takeaway_name" %}selected{% endif %}>
                         Takeaway Name</option>
@@ -27,7 +27,7 @@
                 </select>
             </div>
 
-            <!-- Option to sort list by ascending or descending -->
+            <!-- Option to sort list by ascending or descending. The current type is also selected in advance here -->
             <div class="mt-2 mb-2">
                 <select name="sort_order" class="form-control dropdown-arrow " aria-label="Choose ascending or descending">
                     <option value="asc" {% if request.GET.sort_order == 'asc' %}selected{% endif %}>Ascending</option>

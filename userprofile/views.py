@@ -11,6 +11,7 @@ from index.forms import ReviewForm  # Import Review form
 @login_required
 def takeaway_dashboard(request):
        
+    # Allowed sort fields block people trying to sort by unsupported values
     allowed_sort_fields = [
         "takeaway_name", "food_type", "rating", "created_on"
     ]
@@ -18,6 +19,7 @@ def takeaway_dashboard(request):
     user_reviews = Review.objects.filter(poster=request.user)
 
     if request.method == "GET":
+        # Created_on and descending are default values
         selected_sort = request.GET.get("sort_by", "created_on")
         selected_direction = request.GET.get("sort_order", "desc")
         if selected_sort in allowed_sort_fields:

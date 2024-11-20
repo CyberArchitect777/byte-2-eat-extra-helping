@@ -4,12 +4,12 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 # STATUS = ((0, "Draft"), (1, "Published"))
 
-
 class Review(models.Model):
     """
     Stores or adds a review for a takeaway post.
     """
 
+    # Pre=defined food choices
     FOOD_TYPE_CHOICES = [
         ("Indian", "Indian"),
         ("Italian", "Italian"),
