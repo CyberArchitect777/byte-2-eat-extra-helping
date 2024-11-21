@@ -9,6 +9,10 @@
     color: white;
 }
 
+.bg-black {
+    background-color: black;
+}
+
 .white-links a {
     color: white;
 }
@@ -277,7 +281,7 @@ footer i {
 }
 
 #sort-form legend {
-    font-size: 200%;
+    font-size: 160%;
 }
 
 #sort-form fieldset {
