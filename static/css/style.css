@@ -175,7 +175,7 @@ footer i {
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 0px;
-    order: 1;
+    order: 1; /* Move password requirements underneath the confirm password section */
 }
 
 .login li, #signup_form li {
@@ -188,6 +188,11 @@ footer i {
     width: 150px;
 }
 
+#signup_form p:nth-of-type(4) {
+    /* Hide 4th element of the Django template form used */
+    display: none;
+}
+
 .text-overlay {
     padding: 10px 0px;
     display: inline-block; /* Ensures effect only takes up the width of the text */
@@ -195,6 +200,7 @@ footer i {
 }
 
 #signup_form button {
+    /* Move sign up button underneath the password requirements section */
     order: 2;
 }
 
