@@ -172,8 +172,8 @@ footer i {
 /* Register page */
 
 #signup_form ul {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     padding-left: 0px;
     order: 1; /* Move password requirements underneath the confirm password section */
 }
