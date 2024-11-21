@@ -13,6 +13,10 @@
     color: white;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 /* Page styles */
 
 body {
@@ -168,9 +172,10 @@ footer i {
 /* Register page */
 
 #signup_form ul {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     padding-left: 0px;
+    order: 1; /* Move password requirements underneath the confirm password section */
 }
 
 .login li, #signup_form li {
@@ -183,10 +188,20 @@ footer i {
     width: 150px;
 }
 
+#signup_form p:nth-of-type(4) {
+    /* Hide 4th element of the Django template form used */
+    display: none;
+}
+
 .text-overlay {
     padding: 10px 0px;
     display: inline-block; /* Ensures effect only takes up the width of the text */
     border-radius: 5px; /* Adds rounded corners */
+}
+
+#signup_form button {
+    /* Move sign up button underneath the password requirements section */
+    order: 2;
 }
 
 /* Sign in and Log Out pages */
@@ -259,6 +274,14 @@ footer i {
 
 #edit-review .edit-button {
     width: 100%;
+}
+
+#sort-form legend {
+    font-size: 200%;
+}
+
+#sort-form fieldset {
+    border: 2px solid grey;
 }
 
 /* Media queries */
