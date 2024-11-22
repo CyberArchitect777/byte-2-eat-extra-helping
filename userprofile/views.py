@@ -7,10 +7,11 @@ from django.db.models.functions import Lower
 from index.models import Review  # Import Review model
 from index.forms import ReviewForm  # Import Review form
 
+
 # User dashboard that shows all their reviews
 @login_required
 def takeaway_dashboard(request):
-       
+
     # Allowed sort fields block people trying to sort by unsupported values
     allowed_sort_fields = [
         "takeaway_name", "food_type", "rating", "created_on"
@@ -27,14 +28,17 @@ def takeaway_dashboard(request):
             if selected_direction == "desc":
                 direction_symbol = "-"
             # Only take case into account if the fields are textual strings
-            if (selected_sort == "takeaway_name" or selected_sort == "food_type"):
+            if (selected_sort == "takeaway_name"
+                    or selected_sort == "food_type"):
                 # Create a lowercase version of the selected field
-                user_reviews = user_reviews.annotate(lower_field=Lower(selected_sort))
+                user_reviews = user_reviews.annotate(
+                    lower_field=Lower(selected_sort))
                 # Sort the field in a case-insensitive manner
                 user_reviews = user_reviews.order_by(
                     f"{direction_symbol}lower_field")
             else:
-                user_reviews = user_reviews.order_by(direction_symbol + selected_sort)
+                user_reviews = user_reviews.order_by(
+                    direction_symbol + selected_sort)
 
     return render(
         request,
