@@ -16,12 +16,17 @@ The following changes were made to this successor project when compared to the o
 - The background wallpaper was changed to a totally different image utilising a black transparency filter
 - All known security issues found in the original project were resolved (details omitted)
 - The About page was redesigned completely to be static only with content suitable for the new project
+- Elements on the My Review and Register pages were re-arranged to make them more naturally intuitive. 
+- Navigation links on the navbar are now shown in bold if the current page is the one referenced.
+- The current sort order on the My Reviews page is now shown correctly in the sort selector interface.
+- The sorting functionality on the My Reviews page is now case insensitive.
+- A link to the index page is now found on the navbar.
 - A change was made to ensure that users could not delete reviews without confirmation on large screen sizes
 - All legacy code not used in the original project was removed along with other general code refactoring
 - The database schema was updated to reflect any decisions made about the data needed for this successor project
 - All known responsive issues on varying screen sizes were resolved
 - Checks were carried out to make sure that all custom code met PEP8 standards
-- The semantic site structure was improved
+- The semantic site structure and accessibility code have been improved
 - The site title and metadata were updated to apropriate values
 - Minor spelling issues were corrected
 - The dropdown navbar was changed to drop down the middle of the page and not the right of it
@@ -30,7 +35,7 @@ The following changes were made to this successor project when compared to the o
 - All commented-out code was removed
 - The fictitious company social media icons in the footer were removed as they were not deemed necessary for this project
 - The favicons were updated to reflect the new successor project
-- A "Dockerfile" file was created to configure the project for use in a Docker container
+- A "Dockerfile" was created to configure the project for use in a Docker container
 - Various other style changes were made across the whole site
 
 ## Deployment And Repository
