@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'cloudinary_storage',
     'cloudinary',
-    'index',
+    'index.apps.IndexConfig',
     'userprofile',
     'about',
 ]
@@ -104,16 +104,19 @@ WSGI_APPLICATION = 'bytetoeat.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-	'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+		'OPTIONS': {
+            'timeout': 3,
+        }
+    }			
 }
+
+#DATABASES = {
+#	'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#}
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
