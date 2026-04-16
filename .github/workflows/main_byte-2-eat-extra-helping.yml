@@ -63,4 +63,4 @@ jobs:
         with:
           app-name: 'byte-2-eat-extra-helping'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D6D23589A3274664A1FF423D7398382C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_88EF0A85699042D397CC2B3B27524B25 }}
