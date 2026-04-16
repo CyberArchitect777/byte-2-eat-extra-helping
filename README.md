@@ -1,5 +1,5 @@
 
-# Byte 2 Eat: Extra Helping 
+# Byte 2 Eat: Extra Helping
 ## By Barrie Millar
 ### A Private Takeaway Review Site
 
