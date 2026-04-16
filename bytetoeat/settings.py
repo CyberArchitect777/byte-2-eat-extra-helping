@@ -35,7 +35,8 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
 if os.environ.get("DJANGO_DEBUG", "False") == "True":
 	ALLOWED_HOSTS = [ "localhost", ]
 else:
-	ALLOWED_HOSTS = [ ".herokuapp.com", ]
+	#ALLOWED_HOSTS = [ ".herokuapp.com", ]
+	ALLOWED_HOSTS = [ "*.azurewebsites.net" ]
 
 # Application definition
 
