@@ -11,6 +11,13 @@ Welcome to Byte 2 Eat: Extra Helping, a website designed to allow private users 
 
 The following changes were made to this successor project when compared to the original:-
 
+2026 developments
+
+- The project now uses an SQLite database instead of the original PostgreSQL. This change was made because access to the original Code Institute database is expected to be withdrawn. SQLite is sufficient for development and portfolio demonstration purposes. However, the database is not persistent on the server, so it may periodically reset to the default demo data when the web server restarts.
+- An additional Azure web deployment has been created and the hyperlink to it can be found further down. Heroku will remain the primary live site for now though.
+
+Previous developments
+
 - The site name and logo were rebranded to reflect the new successor project
 - A complete redesign of the interface colour scheme was made to all pages
 - The background wallpaper was changed to a totally different image utilising a black transparency filter
@@ -44,17 +51,17 @@ The following changes were made to this successor project when compared to the o
 
 The links for this project can be found below:
 
-Deployed website: (https://byte-2-eat-extra-helping-d8627f2c050a.herokuapp.com/)
-
-GitHub repository: (https://github.com/CyberArchitect777/byte-2-eat-extra-helping)
+* Main Heroku website deployment: (https://byte-2-eat-extra-helping-d8627f2c050a.herokuapp.com/)
+* Additional Azure website deployment: (https://byte-2-eat-extra-helping.azurewebsites.net/)
+* GitHub repository: (https://github.com/CyberArchitect777/byte-2-eat-extra-helping)
 
 ### Byte 2 Eat (Original)
 
 The links for the original project that this is based on can also be found below:
 
-Deployed website: (https://hackathon3-byte-to-eat-project-25fab4e92590.herokuapp.com/)
+* Deployed website: (https://hackathon3-byte-to-eat-project-25fab4e92590.herokuapp.com/)
+* GitHub repository: (https://github.com/CyberArchitect777/hackathon3-byte-to-eat-project)
 
-GitHub repository: (https://github.com/CyberArchitect777/hackathon3-byte-to-eat-project)
 
 ## Technical
 
